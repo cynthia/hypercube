@@ -1,0 +1,33 @@
+
+# Announce interval.
+tracker_interval	420
+# Initial announce interval
+tracker_init_interval	120
+
+# Timeout if no activity from peer.
+tracker_timeout		666
+
+# Maximum number of peers in an announce response.
+tracker_respnum		64
+
+# Tracker period (peer refresh) interval.
+tracker_period		600
+
+# Tracker statistics log file
+tracker_statslog	statslog
+
+no tracker_sql_stats
+tracker_sql_host	localhost
+tracker_sql_db		tracker
+tracker_sql_user	tracker
+tracker_sql_pass	trawk123
+
+# Synchronize with other trackers?
+tracker_sync
+# Synchronization interval
+tracker_sync_interval	15
+# Max size of a synchronization packet
+tracker_sync_size	1400
+# Address to send synchronization packets to
+tracker_sync_addr	192.168.42.42
+#tracker_sync_addr	255.255.255.255

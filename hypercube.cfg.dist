@@ -1,0 +1,38 @@
+listen_port		8000
+listen_addr		127.0.0.1
+
+default_root		/2/anakata/
+
+log
+log_level		all
+#log_file		log
+
+no background
+
+#chroot_dir rootdir/
+#run_as_uid 242
+#run_as_gid 242
+
+rewrite ^/~([^/]+)/?(.*) /bar/$1/$2
+
+#vhost localhost		/2/anakata/btdl
+vhost wintermute	dox2/ #foo
+vhost bla		dox3/
+vhost bla:4242		dox4/
+
+mime html	text/html
+mime htm	text/html
+mime txt	text/plain
+mime jpeg	image/jpeg
+mime jpg	image/jpeg
+mime gif	image/gif
+mime png	image/png
+mime bmp	image/bmp
+mime wav	audio/x-wav
+mime torrent	application/x-bittorrent
+mime cgi	application/x-cgi
+
+no mime foo bar
+
+include		tracker.cfg
+include		access.cfg
